@@ -262,26 +262,35 @@
 .header-hero-basket_mob {
   width: 100%;
   display: none;
-  position: relative;
 }
 
-.header-hero-basket_mob::before {
+.header-hero-button__menu {
+  position: relative;
+  margin-right: 50px;
+}
+
+.header-hero-button__menu::before {
   position: absolute;
   content: '';
   background: url("../img/black-menu.png");
-  left: 20px;
+  left: 0;
   top: 40%;
   width: 26px;
   height: 6px;
 }
 
-.header-hero-basket_mob::after {
+.header-hero-button__search {
+  position: relative;
+}
+
+.header-hero-button__search::after {
   position: absolute;
   content: '';
   background: url("../img/mob-search.png");
   width: 23px;
   height: 23px;
-  right: 20px;
+  right: -10px;
+  top: -10px;
 }
 
 .header-hero__price {
@@ -338,9 +347,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -485,5 +493,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'PT Sans Caption', sans-serif;
+}
+
+a, button {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */
