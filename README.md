@@ -1,2 +1,2 @@
-# UIGO-test
-Тестовое задание UIGO.
+#  ProfitKit-test
+Тестовое задание ProfitKit.
