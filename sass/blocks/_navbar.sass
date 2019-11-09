@@ -1,0 +1,64 @@
+.header-navbar
+  background-color: #313D50
+  &-list
+    height: 59px
+    display: flex
+    list-style: none
+    justify-content: space-around
+    align-items: center
+    color: #ffffff
+  &__item
+    font-size: 14px
+    font-weight: bold
+    text-decoration: none
+    color: #ffffff
+    cursor: pointer
+    &_blue
+      font-size: 14px
+      font-weight: bold
+      text-align: center
+      padding: 20px 0 20px 0
+      width: 207px
+      background-color: #0B6EDB
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background: url('../img/stroke.png')
+        width: 18px
+        height: 17px
+        left: 20px
+.pad
+  padding: 20px 10px 20px 10px
+
+.go
+  position: relative
+  height: 49px
+  display: block
+  &::after
+    position: absolute
+    content: ''
+    background: url('../img/menu.png')
+    width: 26px
+    height: 6px
+    top: 45%
+    right: 5%
+@media (max-width: 1280px)
+  .header
+    &-navbar
+      &-list
+        height: 49px
+      &__item
+        font-size: 13px
+        &_blue
+          padding: 15px 0 15px 0
+@media (max-width: 1024px)
+  #menu .header
+    &-navbar
+      &__item
+        &_blue
+          display: none
+@media (max-width: 768px)
+  .header
+    &-navbar
+      display: none

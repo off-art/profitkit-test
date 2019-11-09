@@ -1,0 +1,103 @@
+.header
+  &__text
+    color: #141414
+    font-size: 13px
+  &-top
+    border-bottom: 1px solid #D3D3D3
+    padding-top: 15px
+    padding-bottom: 12px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &__logo
+      font-family: 'Secular One', sans-serif
+      font-size: 24px
+      color: #313D50
+      display: none
+    &-phone
+      &__link
+        text-decoration: none
+        color: #3B3B3B
+        font-size: 16px
+        font-weight: bold
+        position: relative
+        display: none
+        &::before
+          position: absolute
+          content: ''
+          background: url('../img/phone.png')
+          width: 19px
+          height: 29px
+          left: -30px
+          top: -5px
+    &__sity a, &__login a
+      text-decoration: none
+    &__sity
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background: url('../img/location.png')no-repeat center center
+        width: 30px
+        height: 30px
+        top: -5px
+        left: -30px
+      &::after
+        position: absolute
+        content: ''
+        background: url('../img/arrow-down.png')no-repeat center center
+        width: 30px
+        height: 30px
+        cursor: pointer    
+    &__address
+      &_bold
+        font-weight: bold
+    &__schedule
+      &_bold
+        font-weight: bold
+    &__login a
+      font-size: 13px
+      font-weight: bold
+      color: #337FD2
+      position: relative
+      &::after
+        position: absolute
+        letter-spacing: 0.205em
+        content: '...................'
+        bottom: -10px
+        left: 0
+      &::before
+        position: absolute
+        content: ''
+        background: url('../img/login.png')
+        width: 30px
+        height: 30px
+        left: -40px
+@media (max-width: 1280px)
+  .header
+    &-top
+      &__sity
+        margin-left: 50px
+    &__text
+      font-size: 12px
+@media (max-width: 1024px)
+  .header
+    &-top
+      &__address, &__schedule
+        display: none
+      &-phone
+        &__link
+          display: block
+@media (max-width: 768px)
+  .header
+    &-top
+      &__logo
+        display: block
+      &-phone
+        &__link
+          &::before
+            display: none
+      &__sity
+        display: none
+      &__login
+        display: none

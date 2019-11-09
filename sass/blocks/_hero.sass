@@ -1,0 +1,147 @@
+.header
+  &-hero
+    padding-top: 25px
+    padding-bottom: 25px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &-title
+      display: flex
+      align-items: center
+    &__logo
+      font-family: 'Secular One', sans-serif
+      font-size: 34px
+      color: #313D50
+      margin-right: 20px
+    &__subtitle
+      display: block
+      width: 125px
+      font-size: 13px
+      color: #3B3B3B
+      line-height: 18px
+    &-phone
+      display: flex
+      flex-direction: column
+      &__link
+        text-decoration: none
+        color: #3B3B3B
+        font-size: 16px
+        font-weight: bold
+        position: relative
+        &::before
+          position: absolute
+          content: ''
+          background: url('../img/phone.png')
+          width: 19px
+          height: 29px
+          left: -30px
+          top: 10px
+      &__order
+        font-size: 11px
+        font-weight: bold
+        color: #337FD2
+        position: relative
+        &::after
+          position: absolute
+          letter-spacing: 0.205em
+          content: '...................'
+          bottom: -10px
+          left: 0
+    &-inputs
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        background: url('../img/search.png')
+        width: 30px
+        height: 30px
+        right: 10px
+        top: 15%
+    &__input
+      width: 430px
+      height: 43px
+      border: 1px solid #D6D6D6
+      border-radius: 53px
+      padding-left: 22px
+      font-size: 13px
+      outline: none
+      color: #8E8E8E
+    &-basket
+      display: flex
+      align-items: center
+      position: relative
+      &::before
+        position: absolute
+        content: ''
+        background: url('../img/bask.png')
+        width: 40px
+        height: 40px
+        left: -50px
+    &-basket
+      &_mob
+        width: 100%
+        display: none
+        position: relative
+        &::before
+          position: absolute
+          content: ''
+          background: url('../img/black-menu.png')
+          left: 20px
+          top: 40%
+          width: 26px
+          height: 6px
+        &::after
+          position: absolute
+          content: ''
+          background: url('../img/mob-search.png')  
+          width: 23px
+          height: 23px
+          right: 20px 
+    &__price
+      font-size: 14px
+    &__button
+      margin-right: 15px
+      background-color: #E65555
+      font-weight: bold
+      color: #ffffff
+      border: none
+      border-radius: 50%
+      width: 30px
+      height: 30px
+      
+
+@media (max-width: 1280px)
+  .header
+    &-hero
+      &__input
+        width: 259px
+        margin-left: -70px
+@media (max-width: 1024px)
+  .header
+    &-hero
+      &-phone
+        display: none
+@media (max-width: 768px)
+  .header
+    &-hero
+      &-title
+        display: none
+      &-inputs
+        display: none
+      &__button
+        position: relative
+        &::before
+          position: absolute
+          content: ''
+          background: url('../img/mob-bask.png')
+          width: 29px
+          height: 26px
+          left: -40px
+          top: 0
+        
+      &-basket
+        display: none
+        &_mob
+          display: flex
+          justify-content: center
+          align-items: center
